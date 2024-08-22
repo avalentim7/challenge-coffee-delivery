@@ -1,0 +1,15 @@
+.Products {
+  display: flex;
+  flex-direction: column;
+  padding: 54px 0;
+
+  h2 {
+    margin-bottom: 48px;
+  }
+}
+
+.Products__cards {
+  display: flex;
+  gap: 40px 32px;
+  flex-wrap: wrap;
+}

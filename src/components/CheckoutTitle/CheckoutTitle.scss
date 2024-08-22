@@ -1,0 +1,12 @@
+.CheckoutTitle {
+  display: flex;
+  gap: 8px;
+
+  h5 {
+    color: var(--color-base-subtitle);
+  }
+
+  span {
+    color: var(--color-base-text);
+  }
+}

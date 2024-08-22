@@ -1,0 +1,31 @@
+.Header {
+  display: flex;
+  margin: 2rem 0;
+  justify-content: space-between;
+
+  .HeaderButtons {
+    display: flex;
+    gap: 12px;
+
+    .HeaderButtons--Location,
+    .HeaderButtons--Cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      padding: 8px;
+      border: none;
+    }
+
+    .HeaderButtons--Location {
+      background: var(--color-purple-light);
+      gap: 4px;
+      color: var(--color-purple);
+    }
+    
+    .HeaderButtons--Cart {
+      background: var(--color-yellow-light);
+      color: var(--color-yellow-dark);
+    }
+  }
+}

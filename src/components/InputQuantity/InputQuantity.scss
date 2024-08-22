@@ -1,0 +1,19 @@
+.InputQuantity {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-base-button);
+  padding: 8px;
+  border-radius: 6px;
+
+  svg {
+    color: var(--color-purple);
+    cursor: pointer;
+  }
+
+  span {
+    color: var(--color-base-title);
+    user-select: none;
+  }
+}
