@@ -11,9 +11,9 @@ interface InputQuantityProps {
 function InputQuantity({ onAddItem, onSubItem, value }: InputQuantityProps) {
   return (
     <div className="InputQuantity">
-      <Minus size={14} weight="bold" onChange={onSubItem} />
-      <span className="text-m-regular">{value}</span>
-      <Plus size={14} weight="bold" onChange={onAddItem} />
+      <Minus size={14} weight="bold" onClick={onSubItem} />
+      <input type="number" className="text-m-regular" value={value} readOnly />
+      <Plus size={14} weight="bold" onClick={onAddItem} />
     </div>
   );
 }

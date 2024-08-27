@@ -9,12 +9,28 @@
   background: var(--color-base-input);
   border: 1px solid var(--color-base-button);
   gap: 4px;
+
+  &:has(input:focus) {
+    border: 1px solid #cc9b6d;
+  }
+
+  &:has(input::placeholder) {
+    color: var(--color-base-label);
+  }
   
   input {
-    color: var(--color-base-label);
+    color: var(--color-base-text);
     background: transparent;
     border: 0;
     outline: 0;
+
+    &::placeholder {
+      color: var(--color-base-label);
+    }
+
+    &:not(:placeholder-shown) + span {
+      display: none;
+    }
   }
 
   span {

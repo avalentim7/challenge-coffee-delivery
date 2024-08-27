@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductCard.scss";
 import { ShoppingCartSimple } from "@phosphor-icons/react";
 import InputQuantity from "../../InputQuantity/InputQuantity";
+import { Link } from "react-router-dom";
 
 type ProductCardProps = {
   name: string;
@@ -9,6 +10,9 @@ type ProductCardProps = {
   price: string;
   categories: string[];
   img: string;
+  quantity: number;
+  onAddItem: () => void;
+  onSubItem: () => void;
 };
 
 export function ProductCard({
@@ -17,6 +21,9 @@ export function ProductCard({
   price,
   categories,
   img,
+  quantity,
+  onAddItem,
+  onSubItem,
 }: ProductCardProps) {
   return (
     <div className="ProductCard">
@@ -25,7 +32,7 @@ export function ProductCard({
       </div>
       <div className="ProductCard__category">
         {categories.map((category: string) => (
-          <span className="tag">{category}</span>
+          <span className="tag" key={category}>{category}</span>
         ))}
       </div>
       <div className="ProductCard__subtitle">
@@ -40,11 +47,11 @@ export function ProductCard({
           <h4 className="title-m">{price}</h4>
         </div>
         <div className="ProductCard__footer__buttons">
-          <InputQuantity onAddItem={() => {}} onSubItem={() => {}} value={1} />
+          <InputQuantity onAddItem={onAddItem} onSubItem={onSubItem} value={quantity} />
           <div className="ProductCard__footer__buttons--cart">
-            <button onClick={() => {}}>
+            <Link to="/checkout">
               <ShoppingCartSimple size={22} weight="fill" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
