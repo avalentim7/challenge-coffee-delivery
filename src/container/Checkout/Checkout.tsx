@@ -59,7 +59,7 @@ export function Checkout() {
             </h3>
             <span className="Checkout__notfound__subtitle text-m-regular">
               <Link to="/">Clique aqui</Link> para voltar ao início e selecionar
-              o seu café.
+              o seu café favorito.
             </span>
           </div>
         </div>
